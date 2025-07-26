@@ -133,6 +133,7 @@ header .nav-link {
     overflow: hidden;
     padding-bottom: 200px;                /* Görsel altına boşluk */
     background: url('../images/honeycomb-bg.png') center/cover no-repeat;
+    background-color: #f3ccd0;
 }
 
 /* 1) Açık mavi üst bant */
@@ -190,7 +191,7 @@ header .nav-link {
 
 /* === SECTION & TITLE === */
 .product-list {
-    background-color: #fce6e9; /* İstersen hafif pembe ton */
+    background-color: #f3ccd0;
 }
 .section-title {
     font-weight: 600;
@@ -264,10 +265,417 @@ header .nav-link {
     transition: opacity 0.7s;
     z-index: -1;
 }
+
 .shop-btn:hover::after {
     opacity: 1;
 }
+
 .shop-btn span {
     position: relative;
     z-index: 2;
+}
+
+
+
+/* --------------------------------------------------
+   Award & Certifications Section
+-------------------------------------------------- */
+.award-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+.award-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-direction: row;
+}
+
+    .award-text {
+        position: relative;
+        top: -200px;
+    }
+
+.award-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Metin bloğu */
+.award-text {
+    max-width: 500px;
+}
+.award-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.award-text p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* İnceleme butonu (aynı gradient'i kullanıyoruz) */
+.award-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #3c3380 0%, #3476b3 100%);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background .3s;
+}
+.award-btn:hover {
+    background: linear-gradient(90deg, #2e275f 0%, #295a8a 100%);
+}
+
+/* Sertifika ikonları listesi */
+.cert-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.cert-list li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cert-list li img {
+    display: block;
+    height: auto !important;
+    max-height: none !important;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    opacity: 0.6;
+    transition: opacity .3s;
+}
+.cert-list li img:hover {
+    opacity: 1;
+}
+
+
+/* ================================
+   Elastin’in Cilde Faydaları Bölümü
+   ================================ */
+.benefits-section {
+    background-color: #EEF6FDFF;    /* Açık mavi arkaplan */
+    padding: 60px 20px;
+}
+
+.benefits-section .container {
+    margin: 0 auto;
+}
+
+.benefits-title {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.benefits-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
+    margin-bottom: 1.2rem;
+}
+
+/* Özet paragrafını biraz vurgulamak istersen */
+.benefits-summary {
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+/* Not bölümü, biraz daha küçük ve italik */
+.benefits-note {
+    font-size: 0.875rem;
+    color: #555;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+
+
+
+/* Slider kapsayıcı */
+.hero-slider-section {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+/* Resmi tam genişlikte göster */
+.hero-slider .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;  /* İsteğe göre köşe yuvarlama */
+}
+
+/* Nav okları */
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    pointer-events: none; /* okların dışına tıklamayı engelle */
+}
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    pointer-events: all;
+    position: absolute;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.owl-nav .owl-prev { left: 15px; }
+.owl-nav .owl-next { right: 15px; }
+
+/* Noktalar (dots) */
+.owl-dots {
+    text-align: center;
+    margin-top: 15px;
+}
+.owl-dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background .3s;
+}
+.owl-dot.active {
+    background: rgba(0,0,0,0.7);
+}
+
+
+
+/* Özet paragrafı vurgusu */
+.benefits-summary {
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+
+
+/* --------------------------------------------------
+   Basın Toplantısı Bölümü
+-------------------------------------------------- */
+.press-section {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.press-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* --- Video Önizlemesi --- */
+.press-video {
+    position: relative;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.press-video img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.press-video .play-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    pointer-events: none;
+}
+
+/* --- Basın Logoları --- */
+.press-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.press-logos li img {
+    max-height: 40px;
+    opacity: 0.6;
+    transition: opacity .3s;
+}
+.press-logos li img:hover {
+    opacity: 1;
+}
+
+/* --- Başlık & Metin & Buton --- */
+.press-text {
+    text-align: center;
+    max-width: 700px;
+}
+.press-text h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.press-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+.press-btn {
+    display: inline-block;
+    background: linear-gradient(90deg, #3c3380 0%, #3476b3 100%);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background .3s;
+}
+.press-btn:hover {
+    background: linear-gradient(90deg, #2e275f 0%, #295a8a 100%);
+}
+
+/* .btn stillerinden kurtulmak için */
+.play-link {
+    background: none !important;
+    padding: 0 !important;
+    display: inline-block;    /* veya block */
+    border: none !important;
+    text-decoration: none;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3rem;
+    color: rgba(255,255,255,0.9);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+
+
+.site-footer {
+    background-color: #d96a6a;  /* Görseldeki tonlara yakın renk */
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Ana içerik */
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+/* Sütun başlıkları */
+.footer-col h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+/* Link listesi */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.footer-links li {
+    margin-bottom: 8px;
+}
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color .2s;
+}
+.footer-links a:hover {
+    color: #fde2e2;
+}
+
+/* İletişim bilgisi paragrafı */
+.footer-col p {
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+}
+
+/* Sosyal ikonlar */
+.social-icons a {
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 1.1rem;
+    color: #fff;
+    transition: color .2s;
+}
+.social-icons a:hover {
+    color: #fde2e2;
+}
+
+/* Alt telif bölümü */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.875rem;
+}
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Responsive image: Container daraldığında küçülür, kendi doğal genişliğini aşmaz */
+.responsive-img {
+    display: block;
+    width: auto;      /* doğal genişlik */
+    max-width: 100%;  /* konteynerden geniş olamaz */
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .red-img {
+        margin-top:-200px !important;
+        max-width: 300px;
+        text-align: center;
+    }
 }
