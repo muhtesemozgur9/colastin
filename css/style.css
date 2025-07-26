@@ -126,3 +126,62 @@ header .nav-link {
     color: #111 !important;
     box-shadow: 0 4px 16px rgba(0,0,0,0.10);
 }
+
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 200px;                /* Görsel altına boşluk */
+    background: url('../images/honeycomb-bg.png') center/cover no-repeat;
+}
+
+/* 1) Açık mavi üst bant */
+.hero-header {
+    background-color: #def2ff;
+    padding: 60px 20px;
+}
+
+/* 2) Metinlerin solda/sağda hizalanması */
+.hero-labels {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.hero-labels .label-left {
+    text-align: left;
+}
+.hero-labels .label-right {
+    text-align: right;
+}
+
+.hero-labels h2 {
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 400;
+    font-size: 5.8rem;
+    letter-spacing: 1px;
+    margin: 0;
+    line-height: 1;
+}
+.hero-labels h3 {
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 400;
+    font-size: 4rem;
+    letter-spacing: 0.5px;
+    margin: .5rem 0 0;
+}
+
+/* 3) Hadise görseli (border yok) */
+.hero-image {
+    position: relative;
+    margin-top: -100px;   /* Görseli üst banda hafifçe bindirir */
+    text-align: center;
+    z-index: 1;
+}
+.hero-image img {
+    width: 800px;         /* İhtiyaca göre ölçekle */
+    max-width: 90%;
+    border: none;         /* Kutu/çerçeve yok */
+    border-radius: 0;     /* Dilersen köşeler de düz olsun */
+}
