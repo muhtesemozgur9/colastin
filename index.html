@@ -11,17 +11,16 @@
     <!-- Owl Carousel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
-    <!-- Dahili CSS kaldırıldı, style.css dosyasına taşındı -->
-</head>
+    <link rel="stylesheet" href="https://use.typekit.net/wim1tib.css"></head>
 <body>
 
 <!-- Header -->
 <header class="container-fluid py-3 shadow-sm" style="position: absolute; top: 0; left: 0; width: 100%; z-index: 10;">
     <div class="container d-flex justify-content-between align-items-center">
         <div>
-            <img src="/images/logo.png" alt="Colastin Logo" height="40">
+            <img src="/images/logo.png" alt="Colastin Logo">
         </div>
-        <nav>
+        <nav class="d-none d-md-block">
             <ul class="nav">
                 <li class="nav-item"><a class="nav-link menu-box" href="#">Anasayfa</a></li>
                 <li class="nav-item"><a class="nav-link menu-box" href="#">Ürünler</a></li>
@@ -29,23 +28,31 @@
                 <li class="nav-item"><a class="nav-link menu-box" href="#">Sertifikalar</a></li>
             </ul>
         </nav>
-        <div class="d-flex align-items-center gap-2">
-            <i class="fas fa-search"></i>
-            <button class="btn btn-outline-dark btn-sm">E-MAGAZA</button>
-        </div>
+        <div class="hamburger d-block d-md-none"><i class="fas fa-bars"></i></div>
     </div>
 </header>
 
+<div class="mobile-menu-overlay">
+    <div class="mobile-menu-close"><i class="fas fa-times"></i></div>
+    <ul class="mobile-nav">
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Ürünler</a></li>
+        <li><a href="#">Haberler</a></li>
+        <li><a href="#">Sertifikalar</a></li>
+    </ul>
+</div>
+
 <!-- Hero Section -->
 <section class="hero-section position-relative">
-    <div class="col-md-6 hero-overlay start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-left">
-            <div class="col-md-3">
-                <h2 class="fw-bold">Dünyanın en iyi laboratuvarında geliştirilen Colastin Türkiye'de!</h2>
-                <p>Colastin içeriğindeki kolajen sayesinde cildini güzelleştirir, ayrıca içerisindeki elastin ile sıkılaştırır!</p>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+
             </div>
-    </div>
-    <div class="container" style="position: absolute; top: 25vh; left: 50%; width: 100%; height: 100%; z-index: 1;">
+        </div>
         <div class="row align-items-center">
+            <div class="col-md-6"></div>
             <div class="col-md-6">
                 <div class="owl-carousel owl-theme">
                     <div class="item"><h4>Slider İçeriği 1</h4></div>
@@ -54,6 +61,16 @@
                 </div>
             </div>
         </div>
+        <div class="row hero-overlay">
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <h2 class="fw-bold">Dünyanın en iyi laboratuvarında geliştirilen Colastin Türkiye'de!</h2>
+                <p>Colastin içeriğindeki kolajen sayesinde cildini güzelleştirir, ayrıca içerisindeki elastin ile sıkılaştırır!</p>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-6"></div>
+        </div>
+
     </div>
 </section>
 
@@ -64,25 +81,25 @@
             <div class="text-white p-3 rounded icon-box">
                 <img src="images/elastin.png" alt="Elastin">
             </div>
-            <div>Elastin</div>
+            <p class="feature-label">Elastin</p>
         </div>
         <div class="col-6 col-md-3 mb-3">
             <div class=" text-white p-3 rounded icon-box">
                 <img src="images/collagen.png" alt="Collagen">
             </div>
-            <div>Collagen</div>
+            <p class="feature-label">Collagen</p>
         </div>
         <div class="col-6 col-md-3 mb-3">
             <div class=" text-white p-3 rounded icon-box">
                 <img src="images/glutatyon.png" alt="Glutatyon">
             </div>
-            <div>Glutatyon</div>
+            <p class="feature-label">Glutatyon</p>
         </div>
         <div class="col-6 col-md-3 mb-3">
             <div class=" text-white p-3 rounded icon-box">
                 <img src="images/biotin.png" alt="Biotin">
             </div>
-            <div>Biotin</div>
+            <p class="feature-label">Biotin</p>
         </div>
     </div>
 </section>
@@ -124,8 +141,8 @@
                     </div>
                 </div>
                 <div class="product-info text-center">
-                    <h4>COLASTIN</h4>
-                    <p>Colastin Kolajen &amp;<br> Elastin 28’li Saşe</p>
+                    <h4 class="product-title">COLASTIN</h4>
+                    <p class="product-description">Colastin Kolajen &amp;<br> Elastin 28’li Saşe</p>
                 </div>
             </div>
             <!-- /Ürün Kartı -->
@@ -137,8 +154,8 @@
                     </div>
                 </div>
                 <div class="product-info text-center">
-                    <h4>COLASTIN</h4>
-                    <p>Ultraflex+ | Collagen &amp;<br> 1·2·3·5·10 · 100 Tablet</p>
+                    <h4  class="product-title">COLASTIN</h4>
+                    <p class="product-description">Ultraflex+ | Collagen &amp;<br> 1·2·3·5·10 · 100 Tablet</p>
                 </div>
             </div>
             <div class="col-6 col-lg-4 col-md-6">
@@ -148,8 +165,8 @@
                     </div>
                 </div>
                 <div class="product-info text-center">
-                    <h4>COLASTIN</h4>
-                    <p>Colastin Kolajen  &amp;<br>
+                    <h4  class="product-title">COLASTIN</h4>
+                    <p class="product-description">Colastin Kolajen  &amp;<br>
                         Elastin 14'lü Saşe</p>
                 </div>
             </div>
@@ -160,8 +177,8 @@
                     </div>
                 </div>
                 <div class="product-info text-center">
-                    <h4>COLASTIN</h4>
-                    <p>Ultraflex+ Saşe | Collagen<br>
+                    <h4  class="product-title">COLASTIN</h4>
+                    <p class="product-description">Ultraflex+ Saşe | Collagen<br>
                         1·2·3·5·10 · 30 x 8g</p>
                 </div>
             </div>
@@ -172,8 +189,8 @@
                     </div>
                 </div>
                 <div class="product-info text-center">
-                    <h4>COLASTIN</h4>
-                    <p>Colastin Youth Kolajen<br>
+                    <h4  class="product-title">COLASTIN</h4>
+                    <p class="product-description">Colastin Youth Kolajen<br>
                         & Elastin</p>
                 </div>
             </div>
@@ -184,8 +201,8 @@
                     </div>
                 </div>
                 <div class="product-info text-center">
-                    <h4>COLASTIN</h4>
-                    <p>Colastin MaxiForm | Kolajen<br>
+                    <h4  class="product-title">COLASTIN</h4>
+                    <p class="product-description">Colastin MaxiForm | Kolajen<br>
                         1-2-3 | Güzellik ve Form Bir Arada</p>
                 </div>
             </div>
@@ -196,8 +213,8 @@
                     </div>
                 </div>
                 <div class="product-info text-center">
-                    <h4>COLASTIN</h4>
-                    <p>Colastin MultiPlus<br>
+                    <h4  class="product-title">COLASTIN</h4>
+                    <p class="product-description">Colastin MultiPlus<br>
                         Kolajen ve Elastin</p>
                 </div>
             </div>
@@ -208,8 +225,8 @@
                     </div>
                 </div>
                 <div class="product-info text-center">
-                    <h4>COLASTIN</h4>
-                    <p>Colastin Kolajen &<br>
+                    <h4  class="product-title">COLASTIN</h4>
+                    <p class="product-description">Colastin Kolajen &<br>
                         Elastin 15'li Likit</p>
                 </div>
             </div>
@@ -220,8 +237,8 @@
                     </div>
                 </div>
                 <div class="product-info text-center">
-                    <h4>COLASTIN</h4>
-                    <p>Colastin Elastin 200 &<br>
+                    <h4  class="product-title">COLASTIN</h4>
+                    <p class="product-description">Colastin Elastin 200 &<br>
                         Kolajen 30'lu Saşe</p>
                 </div>
             </div>
@@ -251,8 +268,8 @@
         </div>
 
         <div class="award-text">
-            <h2>Colastin Ödül ve Sertifikalar</h2>
-            <p>Sahip olduğumuz ödül ve sertifikalarımız ile küresel çapta güvenilirlik.</p>
+            <h2 class="award-title">Colastin Ödül ve Sertifikalar</h2>
+            <p class="award-desc">Sahip olduğumuz ödül ve sertifikalarımız ile küresel çapta güvenilirlik.</p>
             <a href="#sertifikalar" class="btn shop-btn">SERTİFİKALARI İNCELE</a>
         </div>
 
@@ -377,8 +394,8 @@
 
         <!-- Başlık & Açıklama & Buton -->
         <div class="press-text text-left">
-            <h2>Colastin Yerel Basında<br>Yankı Uyandırdı</h2>
-            <p>
+            <h2 class="award-title">Colastin Yerel Basında<br>Yankı Uyandırdı</h2>
+            <p class="award-desc">
                 Hadise’nin bizzat ürünü deneyip faydasını gördükten sonra reklam filminde oynadığı Colastin markası yerel basın, haber kanalları ve gazetelerde oldukça ilgi gördü!
             </p>
             <a href="#haberler" class="btn shop-btn">HABERLERİ İNCELE</a>
@@ -414,7 +431,7 @@
 
         <!-- Sütun 2 -->
         <div class="footer-col">
-            <h4>Get in Touch</h4>
+            <h4>Get IN Touch</h4>
             <p>P. 987 654 321 000</p>
             <p>E. yourmail@email.com</p>
             <p>W. companyname.com</p>
@@ -422,7 +439,7 @@
 
         <!-- Sütun 3 -->
         <div class="footer-col">
-            <h4>Social Media</h4>
+            <h4>SOCIAL MEDIA</h4>
             <div class="social-icons">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>

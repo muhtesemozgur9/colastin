@@ -9,14 +9,8 @@
 .hero-overlay {
     background: #e9f4ffcc; /* Hafif şeffaflık için */
     color: #111;
-    width: 100vw;
-    left: 50%;
-    position: relative;
     z-index: 1;
-    padding-left: 70px;
-    padding-top: 20px;
-    margin-top: 300px;
-
+    margin-top: -200px;
 }
 .hero-overlay h2,
 .hero-overlay p {
@@ -25,13 +19,15 @@
 }
 
 .hero-overlay h2{
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 3.5rem;
+    font-weight: 400;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .hero-overlay p {
     font-size: 1.6rem;
+    font-weight: 400;
     margin-bottom: 30px;
 }
 
@@ -111,7 +107,7 @@ header .nav-link {
 /* Menü kutusu için şeffaf beyaz arka plan ve siyah yazı */
 .menu-box {
     font-family: 'Montserrat', sans-serif;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.3);
     color: #111 !important;
     padding: 6px 18px;
     margin: 0 6px;
@@ -176,7 +172,7 @@ header .nav-link {
 /* 3) Hadise görseli (border yok) */
 .hero-image {
     position: relative;
-    margin-top: -100px;   /* Görseli üst banda hafifçe bindirir */
+    margin-top: -200px;   /* Görseli üst banda hafifçe bindirir */
     text-align: center;
     z-index: 1;
 }
@@ -234,7 +230,6 @@ header .nav-link {
 }
 .product-info p {
     font-size: 0.85rem;
-    color: #555;
     margin: 0;
 }
 
@@ -249,6 +244,7 @@ header .nav-link {
     border: none;
     overflow: hidden;
     z-index: 1;
+    font-family: 'proxima-nova', sans-serif;
 }
 .shop-btn:hover {
     color: #fff;
@@ -672,10 +668,126 @@ header .nav-link {
     margin-right: auto;
 }
 
+/* Mobile menu overlay for small screens */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 100;
+    overflow-y: auto;
+}
+.mobile-menu-overlay.active {
+    transform: translateY(0);
+}
+.mobile-menu-close {
+    position: absolute;
+    top: 20px; right: 20px;
+    font-size: 1.5rem;
+    color: #111;
+    cursor: pointer;
+}
+.mobile-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+}
+.mobile-nav li {
+    margin: 20px 0;
+}
+.mobile-nav li a {
+    color: #111;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+.hamburger {
+    font-size: 1.5rem;
+    color: #111;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     .red-img {
         margin-top:-200px !important;
         max-width: 300px;
         text-align: center;
     }
+
+    .hero-labels h2 {
+        font-family: 'Abhaya Libre', serif;
+        font-weight: 400;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        margin: 0;
+        line-height: 1;
+    }
+    .hero-labels h3 {
+        font-family: 'Abhaya Libre', serif;
+        font-weight: 400;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        margin: .5rem 0 0;
+    }
+    .hero-image{
+        margin-top: -100px;
+    }
+    .hero-overlay {
+        background: #e9f4ffcc; /* Hafif şeffaflık için */
+        color: #111;
+        z-index: 1;
+        margin-top: 0px;
+    }
+}
+
+/* Feature labels font */
+.feature-label {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 400;
+}
+
+.section-title {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 600;
+}
+
+.product-description {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 600;
+    color:#212121;
+}
+
+.product-title {
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 800;
+    color:#212121;
+}
+
+.award-title{
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 800;
+    color:#212121;
+}
+.award-desc{
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 600;
+    color:#212121;
+}
+
+.benefits-title{
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 800;
+    color:#212121;
+}
+.benefits-text > p{
+    font-family: 'proxima-nova', sans-serif;
+    font-weight: 600;
+    color:#212121;
 }

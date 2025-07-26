@@ -27,3 +27,16 @@ $(document).ready(function(){
         ]
     });
 });
+
+// Mobile menu toggle logic
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu-overlay');
+    const closeBtn = document.querySelector('.mobile-menu-close');
+    hamburger.addEventListener('click', () => {
+        mobileMenu.classList.add('active');
+    });
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+    });
+});
