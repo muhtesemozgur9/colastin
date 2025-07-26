@@ -185,3 +185,89 @@ header .nav-link {
     border: none;         /* Kutu/çerçeve yok */
     border-radius: 0;     /* Dilersen köşeler de düz olsun */
 }
+
+
+
+/* === SECTION & TITLE === */
+.product-list {
+    background-color: #fce6e9; /* İstersen hafif pembe ton */
+}
+.section-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+/* === ÜRÜN KARTI === */
+.product-card {
+    background: #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    transition: transform .3s, box-shadow .3s;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    position: relative;
+}
+
+.product-image img {
+    position: relative;
+    margin: 20px auto 0;
+    display: block;
+    z-index: 2;
+    max-width: 100%;
+    width:100%;
+}
+
+.product-info {
+    padding: 1rem;
+}
+.product-info h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+.product-info p {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0;
+}
+
+.shop-btn {
+    position: relative;
+    background: linear-gradient(90deg, #3c337f 0%, #3475b2 100%);
+    color: #fff;
+    padding: 0.75rem 6rem;
+    border-radius: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    overflow: hidden;
+    z-index: 1;
+}
+.shop-btn:hover {
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.shop-btn::after {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: linear-gradient(90deg, #3475b2 0%, #3c337f 100%);
+    opacity: 0;
+    transition: opacity 0.7s;
+    z-index: -1;
+}
+.shop-btn:hover::after {
+    opacity: 1;
+}
+.shop-btn span {
+    position: relative;
+    z-index: 2;
+}
